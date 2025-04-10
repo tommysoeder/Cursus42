@@ -10,13 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strchr(const char *s, int c)
+#include <stdio.h>
+
+char *ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
-			return (*s);
+		if (*s == ((char)c))
+			return ((char *) s);
 		s++;
 	}
-
+	if ((char)c == '\0')
+		return ((char *)s);
+	return NULL;
 }
+/*
+int	main(void)
+{
+	char *s = "Hasta luego!";
+	int c = 's';
+	char *resultado = ft_strchr(s, c);
+	if (resultado != NULL)
+		printf("Carácter encontrado: %c\n", *resultado);
+	else
+		printf("Carácter no encontrado.\n");
+}*/
