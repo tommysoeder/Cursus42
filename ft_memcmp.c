@@ -1,38 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomamart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 20:27:14 by tomamart          #+#    #+#             */
-/*   Updated: 2025/04/09 20:36:49 by tomamart         ###   ########.fr       */
+/*   Created: 2025/05/05 19:53:50 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/05 20:18:51 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include <stdio.h>
 #include <string.h>
 
-void	ft_bzero(void *s, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
-	unsigned char	*ptr;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	ptr = (unsigned char *)s;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
 	while (i < n)
 	{
-		ptr[i] = 0;
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
+	return (0);
 }
 /*
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
+
 int	main(void)
 {
-	char buffer[20] = "Hello !";
-	printf("Antes de ft_bzero: %s\n", buffer);
+	char s1[] = "Hola42";
+	char s2[] = "Hola21";
+	int r1 = ft_memcmp(s1, s2, 6);
+	int r2 = memcmp(s1, s2, 6);
 
-	ft_bzero(buffer, 3);
-
-	printf("Después de ft_bzero: %s\n", buffer);	
-}*/
+	printf("Resultado ft_memcmp: %d\n", r1);
+	printf("Resultado memcmp: %d\n", r2);
+}
+*/

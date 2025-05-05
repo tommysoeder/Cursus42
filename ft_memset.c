@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomamart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 20:27:14 by tomamart          #+#    #+#             */
-/*   Updated: 2025/05/05 19:27:25 by tomamart         ###   ########.fr       */
+/*   Created: 2025/05/05 17:48:01 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/05 17:54:04 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	while (*s)
+	size_t			i;
+	unsigned char	*ptr;
+
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
 	{
-		if (*s == ((char)c))
-			return ((char *) s);
-		s++;
+		ptr[i] = (unsigned char)c;
+		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return (NULL);
+	return (s);
 }
 /*
+void	*ft_memset(void *s, int c, size_t n);
+
 int	main(void)
 {
-	char *s = "Hasta luego!";
-	int c = 's';
-	char *resultado = ft_strchr(s, c);
-	if (resultado != NULL)
-		printf("Carácter encontrado: %c\n", *resultado);
-	else
-		printf("Carácter no encontrado.\n");
+	char buffer[15] = "Hola Mundo!";
+	printf("Antes: %s\n", buffer);
+
+	ft_memset(buffer + 5, '*', 3);
+
+	printf("Después: %s\n", buffer);
+	return (0);
 }*/

@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomamart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 20:27:14 by tomamart          #+#    #+#             */
-/*   Updated: 2025/04/09 20:36:49 by tomamart         ###   ########.fr       */
+/*   Created: 2025/05/05 19:09:40 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/05 19:35:41 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include <stdio.h>
 #include <string.h>
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*ptr;
@@ -22,17 +23,23 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		ptr[i] = 0;
+		if (ptr[i] == (unsigned char)c)
+			return ((void *)&ptr[i]);
 		i++;
 	}
+	return (NULL);
 }
 /*
-int	main(void)
+void *ft_memchr(const void *s, int c, size_t n);
+
+int main(void)
 {
-	char buffer[20] = "Hello !";
-	printf("Antes de ft_bzero: %s\n", buffer);
+    char str[] = "Hola mundo!";
+    char *result = ft_memchr(str, 'm', 10);
 
-	ft_bzero(buffer, 3);
-
-	printf("Después de ft_bzero: %s\n", buffer);	
-}*/
+    if (result)
+        printf("Found: %c\n", *result);
+    else
+        printf("Not found.\n");
+}
+*/
