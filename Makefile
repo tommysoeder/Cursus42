@@ -16,7 +16,6 @@ ft_memcpy.c \
 ft_strchr.c \
 ft_strlen.c \
 ft_strrchr.c \
-libft.a \
 ft_calloc.c \
 ft_isascii.c \
 ft_memchr.c \
@@ -24,3 +23,24 @@ ft_memmove.c \
 ft_strlcat.c \
 ft_strncmp.c \
 ft_tolower.c \
+
+OBj = $(SRC: .c=o)
+RM = rm -ft_atoi
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
+
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	@$(rm) $(OBJ)
+
+fclean: clean
+	@%(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
