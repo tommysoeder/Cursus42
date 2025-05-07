@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomamart <tomamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 13:17:31 by tomamart          #+#    #+#             */
-/*   Updated: 2025/05/07 18:47:41 by tomamart         ###   ########.fr       */
+/*   Created: 2025/05/07 16:55:01 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/07 17:37:39 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-size_t	ft_strlen(char *s)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }
-/*
-int	main(void)
-{
-	printf("%d", ft_strlen("Hola"));
-}*/

@@ -1,43 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomamart <tomamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 19:17:46 by tomamart          #+#    #+#             */
-/*   Updated: 2025/05/07 18:39:21 by tomamart         ###   ########.fr       */
+/*   Created: 2025/05/07 11:12:48 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/07 18:41:35 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <string.h>
 //#include <stdio.h>
-#include "libft.h"
+#include <stdlib.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
-	size_t	j;
+	char	*copy;
+	int		i;
 
 	i = 0;
-	j = 0;
-	while (dst[i])
+	while (s[i])
 		i++;
-	while (src[j] && (j < size))
+	copy = (char *)malloc((i * 1) * sizeof(char));
+	if (!copy)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		dst[i] = src[j];
+		copy[i] = s[i];
 		i++;
-		j++;
 	}
-	dst[i] = '\0';
-	return (i);
+	copy[i] = '\0';
+	return (copy);
 }
 /*
-int	main(void)
+int main(void)
 {
-	char src[50] = "qué tal?";
-	char dest[50] = "Hola, ";
-
-//	ft_strlcat(dest, src, 5);
-//	printf("%s\n", dest);
-	printf("%d\n", ft_strlcat(dest, src, 5));
+    const char *src = "Hola";
+    char *copia = ft_strdup(src);
+    if (!copia)
+        printf("Error");
+    printf("Original: %s\n", src);
+    printf("Copia: %s\n", copia);
+    free(copia);
 }*/

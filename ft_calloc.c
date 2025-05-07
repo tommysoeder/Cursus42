@@ -6,7 +6,7 @@
 /*   By: tomamart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 11:12:48 by tomamart          #+#    #+#             */
-/*   Updated: 2025/05/07 11:12:48 by tomamart         ###   ########.fr       */
+/*   Updated: 2025/05/07 16:30:09 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 #include <stdio.h>
 #include <string.h>
 
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    size_t  total;
-    void    *ptr;
-    size_t  i;
-    char    *temp;
+	size_t	total;
+	void	*ptr;
+	size_t	i;
+	char	*temp;
 
-    total = count * size;
-    ptr = malloc(total);
-    if (!ptr)
-        return (NULL);
-    temp = (char *)ptr;
-    i = 0;
-    while (i < total)
-    {
-        temp[i] = 0;
-        i++;
-    }
-    return (ptr);
+	total = nmemb * size;
+	ptr = malloc(total);
+	if (!ptr)
+		return (NULL);
+	temp = (char *)ptr;
+	i = 0;
+	while (i < total)
+	{
+		temp[i] = 0;
+		i++;
+	}
+	return (ptr);
 }
 /*
-void *ft_calloc(size_t count, size_t size);
-
 int main(void)
 {
     int *arr = (int *)ft_calloc(5, sizeof(int));

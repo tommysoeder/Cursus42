@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tomamart <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tomamart <tomamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 20:27:14 by tomamart          #+#    #+#             */
-/*   Updated: 2025/05/05 19:29:32 by tomamart         ###   ########.fr       */
+/*   Updated: 2025/05/07 18:48:17 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strncmp(const char *s1, const char *s2, int n)
+size_t	ft_strncmp(const char *s1, const char *s2, int n)
 {
 	int	i;
 
