@@ -24,8 +24,8 @@ ft_strlcat.c \
 ft_strncmp.c \
 ft_tolower.c \
 
-OBj = $(SRC: .c=o)
-RM = rm -ft_atoi
+OBJ = $(SRC:.c=.o)
+RM = rm -f
 
 all: $(NAME)
 
@@ -36,10 +36,10 @@ $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@$(rm) $(OBJ)
+	@$(RM) $(OBJ)
 
 fclean: clean
-	@%(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
