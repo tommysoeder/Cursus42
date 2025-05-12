@@ -25,6 +25,7 @@ ft_strncmp.c \
 ft_tolower.c \
 ft_calloc.c \
 ft_strdup.c \
+ft_substr.c \
 
 OBJ = $(SRC:.c=.o)
 RM = rm -f

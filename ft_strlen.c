@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
+#include <stddef.h>
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
@@ -24,5 +25,5 @@ size_t	ft_strlen(char *s)
 /*
 int	main(void)
 {
-	printf("%d", ft_strlen("Hola"));
+	printf("%zu", ft_strlen("Hola"));
 }*/
