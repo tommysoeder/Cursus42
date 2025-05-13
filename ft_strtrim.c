@@ -1,5 +1,6 @@
 #include <stdlib.h>
 // #include <stdio.h>
+#include "libft.h"
 
 static int  ft_is_in_set(char c, char const *set)
 {
@@ -23,9 +24,7 @@ char    *ft_strtrim(char const *s1, char const *set)
     start = 0;
     while (s1[start] && ft_is_in_set(s1[start], set))
         start++;
-    end = 0;
-    while (s1[end])
-        end++;
+    end = ft_strlen(s1);
     while (end > start && ft_is_in_set(s1[end - 1], set))
         end--;
     res = (char *)malloc(end - start + 1);
@@ -37,9 +36,9 @@ char    *ft_strtrim(char const *s1, char const *set)
     res[i] = '\0';
     return (res);
 }
-/*
-int main(void)
-{
-    char *out = ft_strtrim(" - - -Hola!", " -");
-    printf("Resultado: %s\n", out);
-}*/
+
+// int main(void)
+// {
+//     char *out = ft_strtrim(" - - -Hola!", " -");
+//     printf("Resultado: %s\n", out);
+// }
