@@ -1,3 +1,7 @@
+// Reserva (con malloc(3)) y devuelve una nueva
+// string, formada por la concatenación de ’s1’ y
+// ’s2’.
+
 #include <stdlib.h>
 #include "libft.h"
 /*#include <stdio.h>*/

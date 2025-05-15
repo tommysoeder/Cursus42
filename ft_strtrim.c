@@ -1,3 +1,9 @@
+// Elimina todos los caracteres de la string ’set’
+// desde el principio y desde el final de ’s1’, hasta
+// encontrar un caracter no perteneciente a ’set’. La
+// string resultante se devuelve con una reserva de
+// malloc(3)
+
 #include <stdlib.h>
 // #include <stdio.h>
 #include "libft.h"

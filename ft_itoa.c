@@ -1,3 +1,6 @@
+// Utilizando malloc(3), genera una string que
+// represente el valor entero recibido como argumento.
+// Los números negativos tienen que gestionarse.
 #include <stdlib.h>
 // #include <stdio.h>
 

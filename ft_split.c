@@ -1,3 +1,8 @@
+// Reserva (utilizando malloc(3)) un array de strings
+// resultante de separar la string ’s’ en substrings
+// utilizando el caracter ’c’ como delimitador. El
+// array debe terminar con un puntero NULL.
+
 #include <stdlib.h>
 // #include <stdio.h>
 

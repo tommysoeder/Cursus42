@@ -10,20 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// Reserva (con malloc(3)) y devuelve una substring de
+// la string ’s’.
+// La substring empieza desde el índice ’start’ y
+// tiene una longitud máxima ’len’.
+
 #include <stdlib.h>
 #include <stddef.h>
 #include "libft.h"
-#include <stdio.h>
-/*
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}*/
+//#include <stdio.h>
 
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
