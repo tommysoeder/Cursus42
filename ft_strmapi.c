@@ -1,3 +1,10 @@
+// Aplica la función ’f’ a cada carácter de la cadena
+// ’s’, pasando su índice como primer argumento y el
+// propio carácter como segundo argumento. Se crea una
+// nueva cadena (utilizando malloc(3)) para recoger
+// los resultados de las sucesivas aplicaciones de
+// ’f’.
+
 #include <stdlib.h>
 #include "libft.h"
 // #include <stdio.h>
