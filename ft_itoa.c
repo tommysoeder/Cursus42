@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tomamart <tomamart@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/15 12:03:10 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/15 12:03:11 by tomamart         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // Utilizando malloc(3), genera una string que
 // represente el valor entero recibido como argumento.
 // Los números negativos tienen que gestionarse.

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tomamart <tomamart@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/15 12:02:45 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/15 12:02:49 by tomamart         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // Elimina todos los caracteres de la string ’set’
 // desde el principio y desde el final de ’s1’, hasta
 // encontrar un caracter no perteneciente a ’set’. La

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tomamart <tomamart@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/15 12:04:59 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/15 12:05:00 by tomamart         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // Aplica la función ’f’ a cada carácter de la cadena
 // ’s’, pasando su índice como primer argumento y el
 // propio carácter como segundo argumento. Se crea una

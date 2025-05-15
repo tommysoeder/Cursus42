@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tomamart <tomamart@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/15 12:02:59 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/15 12:03:01 by tomamart         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // Reserva (utilizando malloc(3)) un array de strings
 // resultante de separar la string ’s’ en substrings
 // utilizando el caracter ’c’ como delimitador. El

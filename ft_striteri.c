@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tomamart <tomamart@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/15 12:04:48 by tomamart          #+#    #+#             */
+/*   Updated: 2025/05/15 12:04:49 by tomamart         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // A cada carácter de la string ’s’, aplica la función
 // ’f’ dando como parámetros el índice de cada
 // carácter dentro de ’s’ y la dirección del propio
