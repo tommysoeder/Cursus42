@@ -6,7 +6,7 @@
 /*   By: tomamart <tomamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 16:55:01 by tomamart          #+#    #+#             */
-/*   Updated: 2025/05/07 17:37:39 by tomamart         ###   ########.fr       */
+/*   Updated: 2025/05/16 18:06:05 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,50 +18,42 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include "libft.h"
-//#include <stdio.h>
+#include <stdio.h>
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char*   substr;
-    size_t  i;
-    size_t  s_len;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
-    if(!s)
-        return (NULL);
-    s_len = ft_strlen(s);
-    if (start >= s_len)
-    {
-        substr = malloc(1);
-        if (!substr)
-            return (NULL);
-        substr[0] = '\0';
-        return (substr);
-    }
-    if (len > s_len - start)
-        len = s_len - start;
-    substr = malloc(len + 1);
-    if (!substr)
-        return (NULL);
-    i = 0;
-    while (i < len && s[start + i])
-    {
-        substr[i] = s[start + i];
-        i++;
-    }
-    substr[i] = '\0';
-    return (substr);
+	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
+		i++;
+	}
+	str[j] = 0;
+	return (str);
 }
-/*
-int main(void)
-{
-    char *str = "Hola chicos !!";
-    char *sub = ft_substr(str, 5, 3);
 
-    if (sub)
-    {
-        printf("Substring: %s\n", sub);
-        free(sub);
-    }
-    else
-        printf("Error\n");
-}*/
+// int main(void)
+// {
+//     char *str = "Hola chicos !!";
+//     char *sub = ft_substr(str, 5, 3);
+
+//     if (sub)
+//     {
+//         printf("Substring: %s\n", sub);
+//         free(sub);
+//     }
+//     else
+//         printf("Error\n");
+// }

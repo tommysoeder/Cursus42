@@ -6,7 +6,7 @@
 /*   By: tomamart <tomamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 12:02:22 by tomamart          #+#    #+#             */
-/*   Updated: 2025/05/15 12:02:26 by tomamart         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:42:33 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,19 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i = 0;
-	size_t	j = 0;
+	size_t	i;
+	size_t	j;
 	char	*joined;
 	size_t	total_len;
 
+	i = 0;
+	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-
 	total_len = ft_strlen(s1) + ft_strlen(s2);
 	joined = (char *)malloc(sizeof(char) * (total_len + 1));
 	if (!joined)
 		return (NULL);
-
 	while (s1[i])
 	{
 		joined[i] = s1[i];
@@ -44,7 +44,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	joined[i + j] = '\0';
-
 	return (joined);
 }
 /*

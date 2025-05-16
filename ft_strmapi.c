@@ -6,7 +6,7 @@
 /*   By: tomamart <tomamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 12:04:59 by tomamart          #+#    #+#             */
-/*   Updated: 2025/05/15 12:05:00 by tomamart         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:46:12 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,24 @@
 #include "libft.h"
 // #include <stdio.h>
 
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char    *result;
-    unsigned int    i;
+	char			*result;
+	unsigned int	i;
 
-    if (!s || !f)
-        return (NULL);
-    result = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-    if (!result)
-        return(NULL);
-    i = 0;
-    while (s[i])
-    {
-        result[i] = f(i, s[i]);
-        i++;
-    }
-    result[i] = '\0';
-    return (result);
+	if (!s || !f)
+		return (NULL);
+	result = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }
 
 // char    to_upper_wrapper(unsigned int i, char c)

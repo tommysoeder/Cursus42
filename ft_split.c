@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tomamart <tomamart@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: tomamart <tomamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 12:02:59 by tomamart          #+#    #+#             */
-/*   Updated: 2025/05/15 12:03:01 by tomamart         ###   ########.fr       */
+/*   Updated: 2025/05/16 18:27:35 by tomamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ static char	*word_dup(char const *s, int start, int end)
 	return (word);
 }
 
-static void	free_all(char **res, int i)
-{
-	while (i--)
-		free(res[i]);
-	free(res);
-}
+// static void	free_all(char **res, int i)
+// {
+// 	while (i--)
+// 		free(res[i]);
+// 	free(res);
+// }
 
 char	**ft_split(char const *s, char c)
 {
@@ -70,9 +70,10 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	res = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
+	res = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
+	res = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -83,8 +84,9 @@ char	**ft_split(char const *s, char c)
 			while (s[i] && s[i] != c)
 				i++;
 			res[j] = word_dup(s, start, i);
-			if (!res[j++])
-				return (free_all(res, j - 1), NULL);
+			if (!res[j])
+				return (NULL);
+			j++;
 		}
 		else
 			i++;
@@ -92,7 +94,6 @@ char	**ft_split(char const *s, char c)
 	res[j] = NULL;
 	return (res);
 }
-
 // int main(void)
 // {
 //     char **result;
